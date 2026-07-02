@@ -32,7 +32,7 @@ print(x)
 #Casting
 
 x=str(3)   # x will be '3'
-y=int(3)   # y will be 3
+w=int(3)   # y will be 3
 z=float(3) # z will be 3.0
 
 
@@ -105,4 +105,43 @@ print(x)
 print(y)
 print(z)
 
-commit
+
+#Output Variables:
+
+x="Python is awesome"
+print(x)
+
+
+x="Python"
+y="is"
+z="awesome"
+
+print(x,y,z)
+
+
+x="Python "
+y="is "
+z="awesome"
+
+print(x + y + z)
+
+"""
+Without the space after "Python " and "is " the output would be "Pythonisawesome"
+"""
+
+x=5
+y=10
+
+print (x + y)
+
+
+#In the print function, when you try to combine a string and a number witht the + operator, Python will give you an error.
+
+x=5
+y="John"
+print(x + y) #This will give an error because you cannot concatenate a string and an integer directly.
+
+
+x=5
+y="John"
+print(x, y) #This will work because the print function can handle multiple data types when separated by a comma.
