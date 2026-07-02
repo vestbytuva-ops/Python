@@ -145,3 +145,54 @@ print(x + y) #This will give an error because you cannot concatenate a string an
 x=5
 y="John"
 print(x, y) #This will work because the print function can handle multiple data types when separated by a comma.
+
+
+#Python Global Variables:
+
+x="awesome"
+
+def myfunc():
+    print("Python is " + x)
+
+myfunc()
+
+
+
+x="awesome"
+
+def myfunc():
+    x="fantastic"
+    print("Python is " + x)
+
+myfunc()
+
+print("Python is " + x)
+
+
+#The global keyword
+
+def myfunc():
+    global x
+    x="fantastic"
+
+myfunc()
+
+print("Python is " + x)
+
+#To change a global variable inside a function, use the global keyword to declare which variable you want to change.
+
+x="awesome"
+
+def myfunc():
+    global x
+    x="fantastic"
+
+myfunc()
+
+print("Python is " + x)
+
+
+
+
+
+
