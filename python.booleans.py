@@ -16,3 +16,79 @@ else:
 
 print(bool("Hello"))
 print(bool(15))
+
+
+#Evaluate two variables:
+
+x="Hello"
+y=15
+
+print(bool(x))
+print(bool(y))
+
+"""
+Most Values are True
+"""
+
+#Example:
+
+bool("abc")
+bool(123)
+bool(["apple", "cherry", "banana"])
+
+
+"""
+Some Values are False
+"""
+
+#Example:
+
+bool(False)
+bool(none)
+bool(0)
+bool("")
+bool(())
+bool([])
+bool({})
+
+
+#Example:
+
+class myclass():
+    def __len__(self):
+        return 0
+    
+myobj = myclass()
+print(bool(myobj))
+
+
+
+"""
+Functions can Retrun a Boolean
+"""
+
+#Example:
+
+def myFunction():
+    return True
+
+print(myFunction())
+
+#Example:
+
+def myFunction():
+    return True
+
+if myFunction():
+    print("YES!")
+else:
+    print("NO!")
+
+
+#Example: Check if an object is an integer or not:
+
+x=200
+print(isinstance(x,int))
+
+
+
