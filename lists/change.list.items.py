@@ -53,3 +53,13 @@ Insert "watermelon" as the third item:
 thislist = ["apple", "banana", "cherry"]
 thislist.insert(2, "watermelon")
 print(thislist)
+
+#Example:
+
+"""
+Change the second and third value by replacing it with one value:
+"""
+
+thislist = ["apple", "banana", "cherry"]
+thislist[1:3] = ["watermelon"]
+print(thislist)
