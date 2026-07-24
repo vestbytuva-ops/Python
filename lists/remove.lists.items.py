@@ -56,5 +56,9 @@ del thislist #Delete the entire list.
 """If i want to print this it will cause an error because the list is deleted and there is nothing to print."""
 
 
+#Clear the List:
 
+thislist = ["apple", "banana", "cherry"]
+thislist.clear() #The clear() method empties the list.
+print(thislist) 
 
