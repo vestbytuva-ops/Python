@@ -50,8 +50,17 @@ thislist.sort()
 print(thislist)
 
 
-#Example:
+#Example: Perform a case-insensitiv sort of the list:
 
 thislist = ["banana", "Orange", "Kiwi", "cherry"]
 thislist.sort(key = str.lower)
+print(thislist)
+
+
+"""Reverse Order"""
+
+#Example: Reverse the order of the list items:
+
+thislist = ["banana", "Orange", "Kiwi", "cherry"]
+thislist.reverse()
 print(thislist)
