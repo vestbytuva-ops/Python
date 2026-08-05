@@ -4,7 +4,7 @@ A personal collection of Python notes, mini-examples, and practice scripts cover
 
 ---
 
-## Table of Contents
+## Table of Contents:
 
 - [Variables](#variables)
 - [Data Types](#data-types)
