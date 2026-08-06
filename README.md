@@ -19,7 +19,7 @@ A personal collection of Python notes, mini-examples, and practice scripts cover
 
 ---
 
-## Variables
+## Variables:
 
 **File:** [`variables.py`](./variables.py) · [`test.py`](./test.py)
 
