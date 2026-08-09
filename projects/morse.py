@@ -26,11 +26,11 @@ if confirmation.upper() == "Y":
 
     morse_resultat = []
     for letters in new_sentence:
-        code = MORSE_CODE_DICT.get(bokstav,bokstav)
+        code = MORSE_CODE_DICT.get(letter,letter)
         morse_resultat.append(kode)
 
     morse_setning = ' '.join(morse_resultat)
 
-    print("Here is your sentence converted into morse:")
+    print(f"Here is your sentence converted into morse:, {morse_setning}")
 else:
     print("Script is cancelled by user")
