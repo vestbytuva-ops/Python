@@ -25,7 +25,7 @@ if confirmation.upper() == "Y":
     new_sentence = sentence.upper()
 
     morse_resultat = []
-    for letters in new_sentence:
+    for letter in new_sentence:
         code = MORSE_CODE_DICT.get(letter,letter)
         morse_resultat.append(kode)
 
