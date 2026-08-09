@@ -23,6 +23,10 @@ confirmation = input(f"Are you sure you want to transfer this sentence into mors
 
 if confirmation.upper() == "Y":
     new_sentence = sentence.upper()
+
+    morse_resultat = []
+    for letters in new_sentence:
+
     print("Here is your sentence converted into morse:")
 else:
     print("Script is cancelled by user")
