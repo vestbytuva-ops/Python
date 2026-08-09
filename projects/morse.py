@@ -1,4 +1,4 @@
-    MORSE_CODE_DICT = { 'A':'.-', 'B':'-...',
+MORSE_CODE_DICT = { 'A':'.-', 'B':'-...',
                         'C':'-.-.', 'D':'-..', 'E':'.',
                         'F':'..-.', 'G':'--.', 'H':'....',
                         'I':'..', 'J':'.---', 'K':'-.-',
@@ -15,14 +15,14 @@
                         '(':'-.--.', ')':'-.--.-'}
 
 
-    sentence = input("Enter your sentence")
+sentence = input("Enter your sentence")
 
-    #print(f"Are you sure you want to transfer this sentence into morse, {decoded}")
+#print(f"Are you sure you want to transfer this sentence into morse, {decoded}")
 
-    confirmation = input(f"Are you sure you want to transfer this sentence into morse?, {sentence} (Y / N)")
+confirmation = input(f"Are you sure you want to transfer this sentence into morse?, {sentence} (Y / N)")
 
-    if confirmation.upper() == "Y":
-        sentence.upper() == new_sentence
-        print("Here is your sentence converted into morse:")
-    else:
-        print("Script is cancelled by user")
+if confirmation.upper() == "Y":
+    new_sentence = sentence.upper()
+    print("Here is your sentence converted into morse:")
+else:
+    print("Script is cancelled by user")
