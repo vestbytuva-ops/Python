@@ -1,10 +1,10 @@
-# Python Notes (Need Change)
+# Python Notes & Cheat Sheet
 
-A personal collection of Python notes, mini-examples, and practice scripts covering the language fundamentals — from variables and data types to strings, lists, booleans, and operators. This README works as a **quick-reference cheat sheet** for everything in the repository, so you can look things up without digging through every file.
+A personal collection of Python notes, mini-examples, and practice scripts covering the language fundamentals — from variables and data types to strings, lists, tuples, booleans, and operators — plus small hands-on projects. This README works as a **quick-reference cheat sheet** for everything in the repository, so you can look things up without digging through every file.
 
 ---
 
-## Table of Contents:
+## Table of Contents
 
 - [Variables](#variables)
 - [Data Types](#data-types)
@@ -14,12 +14,14 @@ A personal collection of Python notes, mini-examples, and practice scripts cover
 - [Lists](#lists)
 - [Booleans](#booleans)
 - [Operators](#operators)
+- [Tuples](#tuples)
+- [Projects](#projects)
 - [Cheatsheet](#cheatsheet)
 - [Repository Structure](#repository-structure)
 
 ---
 
-## Variables:
+## Variables
 
 **File:** [`variables.py`](./variables.py) · [`test.py`](./test.py)
 
@@ -240,6 +242,7 @@ Notes on creating, accessing, changing, looping through, sorting, copying, and j
 | [`join.lists.py`](./lists/join.lists.py) | Joining lists with `+`, a `for` loop, or `extend()` |
 | [`list.comprehension.py`](./lists/list.comprehension.py) | Full list comprehension syntax with condition and expression |
 | [`list.methods.py`](./lists/list.methods.py) | Full reference list of built-in list methods |
+| [`code.challenge.py`](./lists/code.challenge.py) | Practice challenge: access, update, append, and remove items |
 
 ### Common Methods
 
@@ -410,6 +413,97 @@ if (count := len(numbers)) > 3:
 
 ---
 
+## Tuples
+
+**Folder:** [`tuples/`](./tuples)
+
+Notes on tuples — one of Python's built-in collection types, alongside List, Set, and Dictionary. Unlike lists, tuples are unchangeable (immutable) once created, but they can still be "updated" indirectly by converting them to a list and back.
+
+| File | Covers |
+|---|---|
+| [`python.tuples.py`](./tuples/python.tuples.py) | Creating tuples, duplicates, `len()`, single-item tuples (the trailing comma), mixed data types, the `tuple()` constructor |
+| [`update.tuples.py`](./tuples/update.tuples.py) | "Updating" a tuple by converting it to a list, changing an item, and converting it back |
+
+### Key Points
+
+| Concept | Description |
+|---|---|
+| Immutability | Tuples cannot be changed after creation — no `append()`, `remove()`, or item assignment |
+| Round brackets | Tuples are written with `()` instead of `[]` |
+| Single-item tuple | Needs a trailing comma: `("apple",)` — without it, it's just a string in parentheses |
+| `tuple()` constructor | Builds a tuple from another iterable, e.g. `tuple(("apple", "banana"))` |
+| Workaround for "updating" | Convert to `list()`, modify, then convert back with `tuple()` |
+
+### Examples
+
+```python
+# Creating a tuple
+thistuple = ("apple", "banana", "cherry")
+print(thistuple)
+print(len(thistuple))
+
+# Single-item tuple needs a comma
+thistuple = ("apple",)
+print(type(thistuple))  # <class 'tuple'>
+
+# Without the comma it is NOT a tuple
+thistuple = ("apple")
+print(type(thistuple))  # <class 'str'>
+
+# tuple() constructor
+thistuple = tuple(("apple", "banana", "cherry"))
+
+# "Updating" a tuple via list conversion
+x = ("apple", "banana", "cherry")
+y = list(x)
+y[1] = "kiwi"
+x = tuple(y)
+print(x)  # ('apple', 'kiwi', 'cherry')
+```
+
+[Back to top](#python-notes--cheat-sheet)
+
+---
+
+## Projects
+
+**Folder:** [`projects/`](./projects)
+
+Small, self-contained scripts that combine several of the concepts above into one working program.
+
+| File | Description |
+|---|---|
+| [`morse.py`](./projects/morse.py) | Takes a sentence from the user and converts it into Morse code using a lookup dictionary |
+
+### Morse Code Translator (`morse.py`)
+
+Asks the user for a sentence, confirms the action, then converts every character to its Morse code equivalent using `MORSE_CODE_DICT.get(letter, letter)` inside a loop, and joins the results into a single string.
+
+```python
+sentence = input("Enter your sentence")
+confirmation = input(f"Are you sure you want to transfer this sentence into morse?, {sentence} (Y / N)")
+
+if confirmation.upper() == "Y":
+    new_sentence = sentence.upper()
+
+    morse_resultat = []
+    for letter in new_sentence:
+        code = MORSE_CODE_DICT.get(letter, letter)
+        morse_resultat.append(code)
+
+    morse_setning = ' '.join(morse_resultat)
+
+    print(f"Here is your sentence converted into morse:, {morse_setning}")
+else:
+    print("Script is cancelled by user")
+```
+
+Key techniques used: dictionary lookups with `.get(key, default)` to avoid `KeyError` on characters without a Morse code (like spaces), building up a result list inside a `for` loop, and `' '.join()` to combine the list into a final string.
+
+[Back to top](#python-notes--cheat-sheet)
+
+---
+
 ## Cheatsheet
 
 A compact, at-a-glance summary of every topic in this repository.
@@ -424,6 +518,8 @@ A compact, at-a-glance summary of every topic in this repository.
 | Lists | `append()`, `insert()`, `remove()`, `pop()`, `sort()`, `reverse()`, `copy()`, list comprehension |
 | Booleans | `True`, `False`, `bool()`, truthy/falsy values, `isinstance()` |
 | Operators | `+ - * / // % **`, `== != > < >= <=`, `and or not`, `is`/`is not`, `in`/`not in`, `& \| ^`, ternary `x if cond else y` |
+| Tuples | `()`, immutable, single-item needs a comma `("x",)`, `tuple()`, update via `list()` conversion |
+| Projects | Combine dictionaries, loops, `.get()`, and `.join()` into working scripts |
 
 ---
 
@@ -457,22 +553,28 @@ Python/
 │   ├── copy.lists.py
 │   ├── join.lists.py
 │   ├── list.comprehension.py
-│   └── list.methods.py
+│   ├── list.methods.py
+│   └── code.challenge.py
 ├── booleans/
 │   ├── python.booleans.py
 │   └── booleans.challenge.py
-└── operators/
-    ├── python.operators.py
-    ├── arithmethic.operators.py
-    ├── assignment.operators.py
-    ├── comparison.operators.py
-    ├── logical.operators.py
-    ├── identity.operators.py
-    ├── membership.operators.py
-    ├── bitwise.operators.py
-    ├── operator.precedence.py
-    ├── ternary.operator.py
-    └── code.challenge.py
+├── operators/
+│   ├── python.operators.py
+│   ├── arithmethic.operators.py
+│   ├── assignment.operators.py
+│   ├── comparison.operators.py
+│   ├── logical.operators.py
+│   ├── identity.operators.py
+│   ├── membership.operators.py
+│   ├── bitwise.operators.py
+│   ├── operator.precedence.py
+│   ├── ternary.operator.py
+│   └── code.challenge.py
+├── tuples/
+│   ├── python.tuples.py
+│   └── update.tuples.py
+└── projects/
+    └── morse.py
 ```
 
 ---
