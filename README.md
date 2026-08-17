@@ -1,4 +1,4 @@
-# Python Notes
+# Python Notes:
 A personal collection of Python notes, mini-examples, and practice scripts covering the language fundamentals — from variables and data types to strings, lists, tuples, booleans, and operators — plus small hands-on projects. This README works as a **quick-reference cheat sheet** for everything in the repository, so you can look things up without digging through every file.
 
 ---
