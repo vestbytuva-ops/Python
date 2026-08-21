@@ -1,0 +1,16 @@
+# f = 1
+# N = 20
+
+# for i in range(N):
+#     f = f + 4
+#     print(f)
+    
+
+f = 10
+N = 20
+
+for i in range(N):
+    print(f)
+    f = f - 2
+
+
