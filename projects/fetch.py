@@ -1,7 +1,7 @@
 import requests
 
 def get_weather(city):
-    api_key =
+    api_key = 
     url = f"http://weatherapi.com{api_key}&q={city}"
     response = requests.get(url)
 
