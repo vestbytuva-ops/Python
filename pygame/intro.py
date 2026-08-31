@@ -6,9 +6,9 @@ screen_width = 800
 screen_height = 600
 
 screen = p.display.set_mode((screen_width, screen_height))
-p.display.set_caption("Pygame")
+p.display.set_caption("TuvarakanStudios")
 
-player = p.Rect((300, 250, 50, 50))
+player = p.Rect((300, 250, 50, 100))
 
 run = True
 
@@ -26,6 +26,8 @@ while run:
         player.move_ip(0, -1)
     if key[p.K_s]:
         player.move_ip(0, 1)
+
+    player.clamp_ip(screen.get_rect())
 
     for event in p.event.get():
         if event.type == p.QUIT:
