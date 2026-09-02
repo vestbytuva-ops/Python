@@ -9,5 +9,7 @@ s=0
 dx = (b - a)/n
 
 for i in range(n):
-    x = x + i*dx
+    x = a + i*dx
     s = s + f(x)*dx
+
+print(f"Areal {s}")
