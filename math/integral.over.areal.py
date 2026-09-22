@@ -1,9 +1,9 @@
 def f(x):
-    return -x**2-x+20
+    return x**2-2*x+2
 
-a=0
-b=4
-n=10000
+a=1
+b=5
+n=100
 s=0
 
 dx = (b - a)/n
