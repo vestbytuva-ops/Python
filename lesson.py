@@ -102,3 +102,23 @@ def epost(navn, alder, sted):
     sted.lower()
     return navn + alder + sted + "@gmail.com"
 
+#
+
+numbers = [1,2,3,4,5]
+total_sum = 0
+
+for number in numbers():
+    incremented = number + 1
+    total_sum += incremented
+print("summen er", total_sum)
+
+#
+
+def dobbel(n):
+    tall_dobbel = n * 2
+    return tall_dobbel
+
+n = int(input("tall"))
+svar = dobbel(n)
+
+print(svar)
