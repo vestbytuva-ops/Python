@@ -1,4 +1,9 @@
 class Planet:
+    """
+    Klasse planet
+
+    Inneholder planet-objekter med egenskapene:se under
+    """
     def __init__(self, navn, solavstand, radius, antallRinger = 0):
         self.navn = navn
         self.solavstand = solavstand
