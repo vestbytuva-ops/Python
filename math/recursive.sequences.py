@@ -1,5 +1,5 @@
-tall = 5
+tall = 2
 
 for i in range(20):
     print(tall)
-    tall = tall + 4
+    tall += tall + 2*(i+2)

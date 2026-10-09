@@ -1,10 +1,10 @@
-a=2
-b=1
-n=5
+a=-2
+b=0
+n=8
 
 
 def f(x):
-    return 1/(x+x**2)
+    return x**3-4*x
 
 def trapes_metode(a,b,n):
     dx = (b-a)/n
